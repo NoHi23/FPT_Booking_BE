@@ -8,6 +8,9 @@ E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\FPT_Booking_BE.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\FPT_Booking_BE.pdb
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Azure.Core.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Azure.Identity.dll
+E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Google.Apis.dll
+E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Google.Apis.Auth.dll
+E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Google.Apis.Core.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Humanizer.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
@@ -38,6 +41,7 @@ E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Microsoft.OpenApi.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Mono.TextTemplating.dll
+E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Newtonsoft.Json.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -51,6 +55,7 @@ E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\System.Composition.TypedP
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\System.Drawing.Common.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\System.Management.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\System.Memory.Data.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\System.Runtime.Caching.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
@@ -130,6 +135,7 @@ E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\runtimes\win-x86\native\M
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\runtimes\win\lib\net7.0\System.Management.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\JOB FA25\1M\Backend\FPT_Booking_BE\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

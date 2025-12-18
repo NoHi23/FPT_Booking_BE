@@ -1,5 +1,7 @@
 using FPT_Booking_BE.DTOs;
+using FPT_Booking_BE.Models;
 using FPT_Booking_BE.Repositories;
+using Google.Apis.Auth;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -47,6 +49,64 @@ namespace FPT_Booking_BE.Services
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
+        }
+
+
+        public async Task<string?> LoginWithGoogle(string idToken)
+        {
+            try
+            {
+                var payload = await GoogleJsonWebSignature.ValidateAsync(idToken, new GoogleJsonWebSignature.ValidationSettings
+                {
+                    Audience = new[] { _config["Google:ClientId"] }
+                });
+
+                if (!payload.Email.EndsWith("@fpt.edu.vn", StringComparison.OrdinalIgnoreCase))
+                {
+                    throw new Exception("Chỉ chấp nhận email @fpt.edu.vn");
+                }
+
+                var user = await _userRepo.GetUserByEmail(payload.Email);
+
+                if (user == null)
+                {
+                    user = new User
+                    {
+                        Email = payload.Email,
+                        FullName = payload.Name,
+                        IsActive = true,
+                        RoleId = 3
+                    };
+                    await _userRepo.CreateUserAsync(user);
+                }
+
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.ASCII.GetBytes(_config["Jwt:Key"]);
+
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Subject = new ClaimsIdentity(new Claim[]
+                    {
+                    new Claim(ClaimTypes.Email, user.Email),
+                    new Claim(ClaimTypes.Role, user.Role.RoleName),
+                    new Claim("FullName", user.FullName),
+                    new Claim("UserId", user.UserId.ToString())
+                    }),
+                    Expires = DateTime.UtcNow.AddHours(1),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+                    Issuer = _config["Jwt:Issuer"],
+                    Audience = _config["Jwt:Audience"]
+                };
+
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+                return tokenHandler.WriteToken(token);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+
         }
     }
 }

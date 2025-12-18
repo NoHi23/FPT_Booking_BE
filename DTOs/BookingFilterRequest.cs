@@ -29,6 +29,8 @@ namespace FPT_Booking_BE.DTOs
         public TimeSpan EndTime { get; set; }
         public string Status { get; set; } = null!;
         public string BookedBy { get; set; } = null!;     
-        public int UserId { get; set; } 
+        public int UserId { get; set; }
+        public string? RejectionReason { get; set; }
+        public string? Purpose { get; set; }
     }
 }
